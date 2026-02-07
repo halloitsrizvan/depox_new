@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
@@ -31,14 +32,21 @@ export default function Navbar() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
                 className={clsx(
-                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 md:px-12",
-                    isScrolled ? "glass-nav shadow-sm py-3" : "bg-transparent"
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                 )}
             >
-                <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <Link href="/" className="text-2xl font-bold tracking-tight text-primary flex items-center gap-2">
-                        Depox Studio
-                    </Link>
+                <div className={clsx("w-full md:w-[95%] lg:max-w-7xl mx-auto md:mt-4 md:rounded-2xl flex items-center justify-between px-6 py-4 md:px-12 transition-all duration-300", isScrolled ? "glass-nav py-3" : "bg-transparent")}>
+                    <div className="flex items-center gap-2">
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                            <Image src="/img/logo.png" alt="Logo" width={50} height={50} />
+                        </motion.div>
+                        <Link href="/" className="text-2xl font-bold font-display tracking-tight text-primary flex items-center gap-2">
+                            Depox Studio
+                        </Link>
+                    </div>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-8">

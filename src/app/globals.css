@@ -8,7 +8,17 @@
   --color-text-main: #1a1a1a;
   --color-text-muted: #4a4a4a;
 
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
 }
 
 body {
@@ -16,6 +26,11 @@ body {
   background-color: var(--color-background);
   color: var(--color-text-main);
   overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Glassmorphism utilities */
@@ -27,7 +42,9 @@ body {
 }
 
 .glass-nav {
-  background: rgba(193, 215, 200, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 93, 29, 0.1);
 }

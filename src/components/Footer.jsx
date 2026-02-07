@@ -11,7 +11,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-wrap justify-center items-center gap-8">
-                    <a href="#" className="text-text-muted hover:text-primary transition-colors font-medium">
+                    <a href="https://wa.me/918593826375" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors font-medium">
                         WhatsApp
                     </a>
                     <a href="mailto:depoxstudio@gmail.com" className="text-text-muted hover:text-primary transition-colors font-medium">

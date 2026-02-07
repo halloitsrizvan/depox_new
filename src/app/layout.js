@@ -1,9 +1,17 @@
-import { Inter } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "../components/SmoothScroll";
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+});
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata = {
@@ -15,9 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased bg-[#c1d7c8] text-[#1a1a1a]`}
+        className={`${sora.variable} ${inter.variable} antialiased bg-[#c1d7c8] text-[#1a1a1a] font-sans`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

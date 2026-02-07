@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
@@ -11,15 +11,21 @@ const benefits = [
 ];
 
 export default function WhyDepox() {
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "center center"],
+    });
+
+    const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 1]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
+    const x = useTransform(scrollYProgress, [0, 1], [-50, 0]);
+
     return (
-        <section id="why-us" className="py-32 px-6 bg-white/20 backdrop-blur-sm">
+        <section id="why-us" className="py-32 px-6 bg-white/20 backdrop-blur-sm" ref={containerRef}>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                    >
+                    <motion.div style={{ opacity, scale, x }}>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-main leading-tight tracking-tight">
                             We don’t just build websites.
                             <span className="text-text-muted/60 block mt-6 text-3xl md:text-4xl lg:text-5xl font-medium">
@@ -28,12 +34,7 @@ export default function WhyDepox() {
                         </h2>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="flex flex-col gap-8"
-                    >
+                    <div className="flex flex-col gap-8">
                         {benefits.map((benefit, index) => (
                             <motion.div
                                 key={index}
@@ -51,7 +52,7 @@ export default function WhyDepox() {
                                 </span>
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
