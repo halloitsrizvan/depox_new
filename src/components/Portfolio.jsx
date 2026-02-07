@@ -5,9 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import Magnetic from "./Magnetic";
 
 const projects = [
-    { title: "Supreme Power Fitness Studio", category: "Web Design", color: "from-gray-800 to-gray-900", bg_img: 'https://depoxstudio.vercel.app/img/image.png', link: 'https://supremepowerfitnessstudio.vercel.app/' },
-    { title: "WhatAI – AI Learning Platform", category: "EdTech Platform", color: "from-blue-600 to-indigo-900", bg_img: 'https://depoxstudio.vercel.app/e.png', link: 'https://what-ai-for-all.vercel.app/' },
-    { title: "Wedlora – Wedding Invitation Platform", category: "SaaS Application", color: "from-pink-500 to-rose-900", bg_img: 'https://depoxstudio.vercel.app/we.png', link: 'https://wedlora.vercel.app/' },
+    { title: "Supreme Power Fitness Studio", category: "Web Design", color: "from-gray-800 to-gray-900", bg_img: 'img/image.png', link: 'https://supremepowerfitnessstudio.vercel.app/' },
+    { title: "WhatAI – AI Learning Platform", category: "EdTech Platform", color: "from-blue-600 to-indigo-900", bg_img: 'img/e.png', link: 'https://what-ai-for-all.vercel.app/' },
+    { title: "Wedlora – Wedding Invitation Platform", category: "SaaS Application", color: "from-pink-500 to-rose-900", bg_img: 'img/we.png', link: 'https://wedlora.vercel.app/' },
     { title: "Noor electricals", category: "Web Design", color: "from-pink-500 to-rose-900", bg_img: 'img/noor.png', link: 'https://noorelectricals.vercel.app/' },
 ];
 
