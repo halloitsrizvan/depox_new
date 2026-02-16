@@ -6,9 +6,11 @@ import Magnetic from "./Magnetic";
 
 const projects = [
     { title: "Supreme Power Fitness Studio", category: "Web Design", color: "from-gray-800 to-gray-900", bg_img: 'img/image.png', link: 'https://supremepowerfitnessstudio.vercel.app/' },
-    { title: "WhatAI – AI Learning Platform", category: "EdTech Platform", color: "from-blue-600 to-indigo-900", bg_img: 'img/e.png', link: 'https://what-ai-for-all.vercel.app/' },
+    { title: "Noor Electricals", category: "Web Design", color: "from-pink-500 to-rose-900", bg_img: 'img/noor.png', link: 'https://noorelectricals.vercel.app/' },
     { title: "Wedlora – Wedding Invitation Platform", category: "SaaS Application", color: "from-pink-500 to-rose-900", bg_img: 'img/we.png', link: 'https://wedlora.vercel.app/' },
-    { title: "Noor electricals", category: "Web Design", color: "from-pink-500 to-rose-900", bg_img: 'img/noor.png', link: 'https://noorelectricals.vercel.app/' },
+    { title: "BIA Business Consultants", category: "Web Design", color: "from-pink-500 to-rose-900", bg_img: 'img/bia.png', link: 'https://biabusinessconsultants.vercel.app' },
+    { title: "Flight 99", category: "Web Design", color: "from-pink-500 to-rose-900", bg_img: 'img/flight.png', link: 'https://flight999.netlify.app/' },
+    { title: "WhatAI – AI Learning Platform", category: "EdTech Platform", color: "from-blue-600 to-indigo-900", bg_img: 'img/e.png', link: 'https://what-ai-for-all.vercel.app/' },
 ];
 
 export default function Portfolio() {
